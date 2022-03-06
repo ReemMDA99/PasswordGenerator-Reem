@@ -10,25 +10,46 @@
   <body>
     <div class="wrapper">
       <header>
+        <div class="password-generator">
         <h1>Password Generator</h1>
+        <div class="password">
+          <p id="passwordBox"></p>
+        </div>
+        </div>
       </header>
       <div class="card">
         <div class="card-header">
           <h2>Generate a Password</h2>
         </div>
         <div class="card-body">
-          <textarea
-            readonly
-            id="password"
-            placeholder="Your Secure Password"
-            aria-label="Generated Password"
-          ></textarea>
+          <textarea class="password-display" id="password" aria-label="Generated Password" placeholder= "My Secure Password"></textarea>
         </div>
-        <div class="card-footer">
-          <button id="generate" class="btn">Generate Password</button>
+        
+        
+        <form id ="passwordGeneratorForm" class="form">
+         
+          <label for="length">Length</label>
+          <div class="character-amount-container">
+            <input type="number" min="8" max="128" value="8">
+          </div>
+
+          <label for="includeUppercase">Include Uppercase</label>
+          <input type="checkbox" id="includeUppercase" checked>
+          
+          <label for="includeLowercase">Include Lowercase</label>
+          <input type="checkbox" id="includeLowercase" checked>
+          
+          <label for="includeNumbers">Include Numbers</label>
+          <input type="checkbox" id="includeNumbers" checked>
+
+          <label for="includeSymbols">Include Symbols</label>
+          <input type="checkbox" id="includeSymbols" checked>
+        </form>
+
+          <div class="card-footer"> 
+            <button type="generate" class="btn" onclick="createPassword()">Generate Password</button>  
         </div>
       </div>
-    </div>
     <script src="script.js"></script>
   </body>
 </html>

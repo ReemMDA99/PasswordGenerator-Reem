@@ -54,6 +54,18 @@ header {
   min-height: 100px;
 }
 
+form {
+  display: grid;
+  grid-template-columns: auto auto;
+  row-gap: 1rem;
+  column-gap: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+label {
+  font-weight: bold;
+}
+
 .card-footer {
   text-align: center;
 }
@@ -71,6 +83,11 @@ header {
   display: block;
   clear: both;
 }
+.character-amount-container {
+  display: flex;
+  align-items: center;
+
+}
 
 .btn {
   border: none;
@@ -86,6 +103,10 @@ header {
   padding: 14px 34px;
   text-align: center;
   cursor: pointer;
+  grid-column: span 2;
+}
+.btn:hover {
+  background-color:crimson;
 }
 
 button[disabled] {
@@ -97,7 +118,7 @@ button[disabled] {
   float: right;
 }
 
-#password {
+.password-display {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -108,7 +129,7 @@ button[disabled] {
   padding-left: 15px;
   padding-right: 15px;
   padding-bottom: 85px;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -116,7 +137,9 @@ button[disabled] {
   border-radius: 6px;
   resize: none;
   overflow: hidden;
+
 }
+
 
 @media (max-width: 690px) {
   .btn {
@@ -125,7 +148,7 @@ button[disabled] {
     padding: 10px 15px;
   }
 
-  #password {
+  .password-displaY {
     font-size: 1rem;
   }
 }
