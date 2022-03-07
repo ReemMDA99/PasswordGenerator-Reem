@@ -20,7 +20,7 @@ SO THAT I can create a strong password that provides greater security
 4. When prompted for password criteria, show list of criteria to include in the password.
 5. The length of the password should be at least 8 characters and no more than 128 characters.
 6. Character types should include lowercase, uppercase, numeric, and/or special characters.
-7. After selecting character type, input should be validated and at least one character type should be selected.
+7. After selecting character type, input should be validated and at least one character type should be selected.!
 8. When all prompts are answered, then a password is generated that matches the selected criteria.
 9. WHEN the password is generated, then the password is written to the page.
 
@@ -35,7 +35,4 @@ SO THAT I can create a strong password that provides greater security
  Include a README describing the project: Included
 
  ## Screenshot
-
-https://raw.githubusercontent.com/ReemMDA99/PasswordGenerator-Reem/main/Assets/03-javascript-homework-demo.png
-
-![screenshot](../Assets/03-javascript-homework-demo.png)
+![03-javascript-homework-demo](https://user-images.githubusercontent.com/94458512/157103574-a0c092f1-0833-4301-9d61-d3be335df84d.png)
