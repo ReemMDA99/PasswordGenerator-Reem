@@ -37,3 +37,5 @@ SO THAT I can create a strong password that provides greater security
  ## Screenshot
 
 https://raw.githubusercontent.com/ReemMDA99/PasswordGenerator-Reem/main/Assets/03-javascript-homework-demo.png
+
+![screenshot](../Assets/03-javascript-homework-demo.png)
