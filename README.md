@@ -36,4 +36,4 @@ SO THAT I can create a strong password that provides greater security
 
  ## Screenshot
 
-url (./Assets/03-javascript-homework-demo.png)
+C:\Users\hp\Desktop\projects\PasswordGenerator-Reem\Assets\03-javascript-homework-demo.png
