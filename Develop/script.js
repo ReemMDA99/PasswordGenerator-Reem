@@ -15,7 +15,7 @@ const randomFunc = {
 
 }
 // Add event listener to generate button
-generateEl.addEventListener('click', () => {
+  generateEl.addEventListener('click', () => {
     const length = +lengthEl.value;
     const hasLower = lowercaseEl.checked;
     const hasUpper = uppercaseEl.checked;
@@ -32,7 +32,7 @@ function generatePassword(lower, upper, number, symbol, length) {
     const typeArr = [{lower}, {upper}, {number}, {symbol}].filter(item => Object.values(item)[0]);
 
     if(typesCount === 0) {
-        return ('Please select atleast one option');
+        return (window.alert('Please select atleast one option'));
     } 
   
     
@@ -66,6 +66,3 @@ function getRandomSymbol() {
     const symbols = '!@#$%^&*()<>[]{}/,.='
     return symbols[Math.floor(Math.random() * symbols.length)];
 }
-
-var length = Number(prompt("How many characters would you like your password to be?"));
-while (isNaN(length) || length < 8 || length > 128) length = Number(prompt("Length must be 8-128 characters."));
