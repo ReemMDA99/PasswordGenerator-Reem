@@ -7,16 +7,25 @@ const numbersEl = document.getElementById('numbers');
 const symbolsEl = document.getElementById('symbols');
 const generateEl = document.getElementById('generate');
 
-const randomFunc = {
+//create a random function
+
+  const randomFunc = {
     lower: getRandomLower,
     upper: getRandomUpper,
     number: getRandomNumber,
     symbol: getRandomSymbol
 
 }
+
+var lengthpass =window.prompt("How many characters would you like your password to be?")
+console.log(lengthpass);
+if (lengthpass < 8 || lengthpass > 128){
+  window.alert("Please enter the numbers between 8 to 128!")
+  lengthpass =window.prompt("How many characters would you like your password to be?")
+}
 // Add event listener to generate button
   generateEl.addEventListener('click', () => {
-    const length = +lengthEl.value;
+    const length = +lengthpass;
     const hasLower = lowercaseEl.checked;
     const hasUpper = uppercaseEl.checked;
     const hasNumber = numbersEl.checked;
