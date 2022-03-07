@@ -1,6 +1,6 @@
 // Assignment Code
+
 const resultEl = document.getElementById('result');
-const lengthEl = document.getElementById('length');
 const uppercaseEl = document.getElementById('uppercase');
 const lowercaseEl = document.getElementById('lowercase');
 const numbersEl = document.getElementById('numbers');
@@ -16,15 +16,19 @@ const generateEl = document.getElementById('generate');
     symbol: getRandomSymbol
 
 }
+//create alert for length of password not less than 8 and more than 128.
 
 var lengthpass =window.prompt("How many characters would you like your password to be?")
+
 console.log(lengthpass);
+
 if (lengthpass < 8 || lengthpass > 128){
   window.alert("Please enter the numbers between 8 to 128!")
   lengthpass =window.prompt("How many characters would you like your password to be?")
 }
 // Add event listener to generate button
-  generateEl.addEventListener('click', () => {
+    
+generateEl.addEventListener('click', () => {
     const length = +lengthpass;
     const hasLower = lowercaseEl.checked;
     const hasUpper = uppercaseEl.checked;
@@ -35,10 +39,13 @@ if (lengthpass < 8 || lengthpass > 128){
     
 });
 // Write password to the #password input
+    
 function generatePassword(lower, upper, number, symbol, length) {
     let generatedPassword = '';
     const typesCount = lower + upper + number + symbol;
     const typeArr = [{lower}, {upper}, {number}, {symbol}].filter(item => Object.values(item)[0]);
+
+// Create alert to select atleast one option uppercase/ lowercase/ numbers or symbols.
 
     if(typesCount === 0) {
         return (window.alert('Please select atleast one option'));
