@@ -10,8 +10,13 @@ body,
   height: 100%;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  min-height: 100vh;
 }
-
 body {
   font-family: sans-serif;
   background-color: #f9fbfd;
@@ -21,6 +26,7 @@ body {
   padding-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
+  max-width: 100%;
 }
 
 header {
@@ -42,6 +48,7 @@ header {
   padding: 30px 40px;
 }
 
+
 .card-header::after {
   content: " ";
   display: block;
@@ -52,18 +59,7 @@ header {
 
 .card-body {
   min-height: 100px;
-}
 
-form {
-  display: grid;
-  grid-template-columns: auto auto;
-  row-gap: 1rem;
-  column-gap: 3rem;
-  justify-content: center;
-  align-items: center;
-}
-label {
-  font-weight: bold;
 }
 
 .card-footer {
@@ -78,16 +74,20 @@ label {
   height: 2px;
 }
 
+
 .card-footer::after {
   content: " ";
   display: block;
   clear: both;
 }
-.character-amount-container {
-  display: flex;
-  align-items: center;
 
+.setting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
 }
+
 
 .btn {
   border: none;
@@ -103,11 +103,11 @@ label {
   padding: 14px 34px;
   text-align: center;
   cursor: pointer;
-  grid-column: span 2;
 }
 .btn:hover {
-  background-color:crimson;
-}
+    background-color:crimson;
+  }
+
 
 button[disabled] {
   cursor: default;
@@ -118,18 +118,19 @@ button[disabled] {
   float: right;
 }
 
-.password-display {
+textarea {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
   border: none;
   display: block;
-  width: 100%;
+  width: 150%;
   padding-top: 15px;
   padding-left: 15px;
   padding-right: 15px;
   padding-bottom: 85px;
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  color:hsl(206, 17%, 28%);
   text-align: center;
   margin-top: 10px;
   margin-bottom: 10px;
@@ -137,10 +138,7 @@ button[disabled] {
   border-radius: 6px;
   resize: none;
   overflow: hidden;
-
 }
-
-
 @media (max-width: 690px) {
   .btn {
     font-size: 1rem;
@@ -148,7 +146,7 @@ button[disabled] {
     padding: 10px 15px;
   }
 
-  .password-displaY {
+  textarea {
     font-size: 1rem;
   }
 }
